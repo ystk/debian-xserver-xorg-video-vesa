@@ -1,3 +1,11 @@
+commit ba6527d2695574f6f7808ada39f6caed7a688f39
+Author: Adam Jackson <ajax@redhat.com>
+Date:   Mon Jan 4 14:19:13 2010 -0500
+
+    vesa 2.3.0
+    
+    Signed-off-by: Adam Jackson <ajax@redhat.com>
+
 commit 1d0e73302d4c4eda56f32e129920ccd263f524ce
 Author: Adam Jackson <ajax@redhat.com>
 Date:   Mon Jan 4 14:16:42 2010 -0500
