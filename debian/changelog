@@ -1,3 +1,76 @@
+xserver-xorg-video-vesa (1:2.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable, so lower xserver-xorg-dev build-dep.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 02 Apr 2012 01:52:58 +0000
+
+xserver-xorg-video-vesa (1:2.3.0-7+exp1) experimental; urgency=low
+
+  * Merge from upstream master up to 4ba7306fd0 to make it possible
+    to build against 1.12 RC1 (video ABI 12).
+  * Build against Xserver 1.12 RC1.
+  * Add an explicit build-dep on libpciaccess-dev (pulled implicitly
+    through xserver-xorg-dev), with the right version.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 01 Jan 2012 07:04:23 +0100
+
+xserver-xorg-video-vesa (1:2.3.0-7) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 15 Jun 2011 14:57:46 +0200
+
+xserver-xorg-video-vesa (1:2.3.0-6) experimental; urgency=low
+
+  * Add udeb needed for the graphical install on non-Linux ports since
+    fbdev is Linux-only (Closes: #596595).
+  * Merge from upstream master up to 0b02c68581, including:
+    - Refuse to load if there's a kernel driver bound to the device
+  * This makes the need for the following patch go away, so remove:
+    - 001_ubuntu_bail_when_kms_active.patch
+  * Remove libdrm-dev and x11proto-xf86dri-dev build-dep accordingly.
+  * As a consequence, libdrm is no longer used, even if libdrm-dev is
+    present at build-time (Closes: #596594).
+  * Update debian/copyright from upstream COPYING.
+  * Bump xutils-dev build-dep for newer macros.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 04 Apr 2011 01:46:48 +0200
+
+xserver-xorg-video-vesa (1:2.3.0-5+exp2) experimental; urgency=low
+
+  * Rebuild against Xserver 1.10 rc3.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 25 Feb 2011 15:56:53 +0100
+
+xserver-xorg-video-vesa (1:2.3.0-5+exp1) experimental; urgency=low
+
+  * Rebuild against Xserver 1.10 rc2.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 21 Feb 2011 01:29:58 +0100
+
+xserver-xorg-video-vesa (1:2.3.0-5) unstable; urgency=low
+
+  * Fix typos in long description.
+  * Switch to dh:
+    - Use debhelper 8.
+    - Use dh-autoreconf.
+    - Bump xserver-xorg-dev build-dep for dh_xsf_substvars and xsf
+      debhelper sequence.
+  * Remove xsfbs accordingly.
+  * Update Uploaders list. Thanks, David & Brice!
+  * Remove long obsolete Replaces/Conflicts.
+  * Wrap Depends/Provides.
+  * Bump Standards-Version to 3.9.1 (no changes needed).
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 05 Feb 2011 14:59:35 +0100
+
+xserver-xorg-video-vesa (1:2.3.0-4) experimental; urgency=low
+
+  * Build against Xserver 1.9.1 rc1.
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 13 Oct 2010 00:54:34 +0200
+
 xserver-xorg-video-vesa (1:2.3.0-3) unstable; urgency=low
 
   * Add patch by Christopher James Halse Rogers from Ubuntu to bail in Probe
